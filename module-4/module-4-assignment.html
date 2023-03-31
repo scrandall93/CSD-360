@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+    <!--
+
+       Sam Crandall
+       March 30th, 2023
+       Module 4 Assignment 
+
+    -->
+
+    <head>
+
+       <script>
+            var i = 842;
+            // sum being 1183.2857142857142 //
+            document.write(i + i % 3 / 7 - 2 + 7 ** 3);
+            document.write("<br>");
+            // sum being 341.14285714285717 //
+            document.write((i + i) % 3 / 7 - 2 + 7 ** 3);
+            document.write("<br>");
+            // sum being 1185.4 //
+            document.write(i + i % 3 / (7 - 2) + 7 ** 3);
+            document.write("<br>");
+            // sum being 842.0011574074074 //
+            document.write(i + i % 3 / (7 - 2 + 7) ** 3);
+            document.write("<br>");
+            // sum being 113.28571428571433 //
+            document.write(i + i % 3 / 7 - (2 + 7) ** 3);
+            document.write("<br>");
+            // sum being 343.2 //
+            document.write((i + i) % 3 / (7 - 2) + 7 ** 3);
+            document.write("<br>");
+            // sum being 841.75 //
+            document.write((i + ((i % 3) / (((7*(-2)) + 7) ** 3)) - 0.24416909621).toFixed(2));
+            document.write("<br>");
+       </script>
+
+    </head>
+
+<html>
