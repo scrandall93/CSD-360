@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+
+       Sam Crandall
+       April 14th, 2023
+       CSD 360; Module 6 Assignment 
+
+    -->
+
+    <head>
+        <title>30 Instances of Fibonacci Numbers</title>
+        <!-- displaying page title -->
+        <h1>30 Instances of Fibonacci Numbers</h1>
+    </head>
+
+    <body>
+        <script>
+            // declaring variables needed //
+            var v1 = 1;
+            var v2 = 1;
+            var counter;
+            var totalizer; 
+
+            // displaying first & second variables //
+            document.write("1-1");
+            document.write("<br>");
+            document.write("2-1");
+            document.write("<br>");
+
+            // for loop to handle 3-30 stages //
+            for(counter = 3; counter <= 30; counter++) {
+                // initializing totalizer variable with sum of v1+v2 //
+                totalizer = v1 + v2;
+                // changing v1's value to v2's //
+                v1 = v2;
+                // changing v2's value to totalizer (sum) value //
+                v2 = totalizer;
+                // outputting the values of counter & totalizer for each stage //
+                document.write(counter + "-" + totalizer);
+                document.write("<br>");
+            }
+        </script>
+    </body>
+<html>
+
+
+<!-- references 
+    https://www.thepolyglotdeveloper.com/2015/01/fibonacci-sequence-printed-javascript/ 
+    https://www.programiz.com/javascript/examples/fibonacci-series#:~:text=Example%201%3A%20Fibonacci%20Series%20Up%20to%20n%20Terms&text=The%20for%20loop%20iterates%20up,is%20stored%20in%20variable%20n2%20. -->
