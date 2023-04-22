@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+
+       Sam Crandall
+       April 21st, 2023
+       CSD 360; Module 7 Assignment 
+
+    -->
+
+    <head>
+        <title>10 Favorite Sports Teams</title>
+        <!-- displaying page title -->
+        <h1>10 Favorite Sports Teams</h1>
+    </head>
+
+    <body>
+        <script>
+            // initializing array of 10 favorite sports teams //
+            let myArray = ["New Orleans Pelicans", "New Orleans Saints", "Atlanta Falcons", "Atlanta Braves", "Chicago Bears", "Texas Rangers", "Houston Texans", "Dallas Mavericks", "Houston Astros", "Houston Rockets"]
+
+            document.write("<br>");       
+            document.write("Elements existing in Array printed in original order: ");
+            document.write("<br>");
+
+            // for loop to handle printing elements within array in original order //
+            for(let i = 0; i < myArray.length; i++) {
+                document.write(myArray[i]+" ");
+                document.write("<br>")
+            }
+
+            document.write("<br>");
+            document.write("Elements existing in Array printed in reverse order: ");
+            document.write("<br>");
+
+            // for loop to handle printing elements within array in reverse order //
+            for(let i = myArray.length - 1; i >= 0; i--) {
+                document.write(myArray[i]+" ");
+                document.write("<br>")
+            }
+        </script>
+    </body>
+<html>
+
+    <!--
+        References:
+            https://www.tutorialstonight.com/how-to-print-array-in-javascript-using-for-loop ;
+            https://www.techiedelight.com/loop-through-array-backwards-javascript/ ; 
+    -->
