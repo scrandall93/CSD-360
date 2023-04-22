@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+
+       Sam Crandall
+       April 21st, 2023
+       CSD 360; Module 8 Assignment 
+
+    -->
+
+    <head>
+        <title>Values 4-14 Table Exercise</title>
+        <!-- displaying page title -->
+        <h1>Values 4-14 Table Exercise</h1>
+    </head>
+
+    <body>
+        <script>
+            // creating table tag with specifications //
+            document.write('<table border="1" cellspacing="0" cellpadding="5">');
+
+            // creating th tags w/ column headers //
+            document.write("<tr><th>Initial Values, 4-14</th><th>Square Root of Initial Values</th>");
+            document.write("<th>Initial Values to the Power of Two</th><th>Initial Values to the Power of Three</th></tr>");
+
+            // iterate from numbers 4 through 14 and apply the math required to each element //
+            for (let i = 4; i <= 14; i++) {
+
+                // opening table rows //
+                document.write("<tr>");
+
+                // creating data to represent values 4-14 //
+                document.write(`<td>${i}</td>`);
+
+                // creating data to represent the value of the square roots of each element, rounded to the second decimal //
+                document.write(`<td>${Math.sqrt(i).toFixed(2)}</td>`);
+
+                // create data to represent the value of each element to the second power //
+                document.write(`<td>${Math.pow(i, 2)}</td>`);
+
+                // create data to represent the value of each element to the third power //
+                document.write(`<td>${Math.pow(i, 3)}</td>`);
+
+                // closing table rows //
+                document.write("</tr>");
+            }
+                // closing table //
+                document.write("<table/>");
+        </script>
+    </body>
+<html>
+
+    <!--
+        References:
+            https://www.valentinog.com/blog/html-table/ ;
+            https://stackoverflow.com/questions/15762768/javascript-math-round-to-two-decimal-places ;
+            https://flexiple.com/javascript/javascript-square-root/ ;
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow ;
+    -->
