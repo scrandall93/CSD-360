@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+
+       Sam Crandall
+       April 28th, 2023
+       CSD 360; Module 9 Assignment 
+
+    -->
+
+    <head>
+        <title>Array Function Exercise</title>
+        <h1>Array Function Exercise</h1>
+    </head>
+
+    <body>
+    <script>
+
+        // initializing counter function //
+        function counter(testArray, index, pos_count, neg_count, zero_count) {
+            // if statement to loop through array //
+            if (index < testArray.length) {
+                // if statement to handle finding negative elements //
+                if (testArray[index] < 0) {
+                    neg_count++;
+                // if statement to handle finding positive elements //
+                } else if (testArray[index] > 0) {
+                    pos_count++;
+                // if statement to handle finding zero elements //
+                } else if (testArray[index] === 0) {
+                    zero_count++;
+                }
+                return counter(testArray, index + 1, pos_count, neg_count, zero_count);
+            } else {
+                return {pos_count, neg_count, zero_count};
+            }
+        }
+ 
+        // initializing array //
+        var testArray = [-4,-3,-2,-1,0,1,2,3,4];
+        // initializing counts to be able to pull individual counts by type //
+        var counts = counter(testArray, 0, 0, 0, 0);
+        // current elements existing in array //
+        document.writeln(`The elements making up the array are: ` + testArray);
+        document.write("<br>");
+        // sum of the positive elements existing in the array // 
+        document.writeln(`The count of positive elements in the array is: ${counts.pos_count}`);
+        document.write("<br>");
+        // sum of the negative elements existing in the array //
+        document.writeln(`The count of negative elements in the array is: ${counts.neg_count}`);
+        document.write("<br>");
+        // sum of the zero elements existing in the array //
+        document.writeln(`The count of zero elements in the array is: ${counts.zero_count}`);
+        document.write("<br>");
+
+    </script>
+    </body>
+</html>
+
+
+    <!-- references
+        https://www.geeksforgeeks.org/javascript-program-to-count-positive-and-negative-numbers-in-an-array/ 
+        https://fjolt.com/article/javascript-passing-arrays-as-function-parameters#:~:text=As%20such%2C%20Javascript%20provides%20us,()%20and%20the%20spread%20operator. 
+        https://www.w3schools.com/js/js_if_else.asp 
+        https://fjolt.com/article/javascript-passing-arrays-as-function-parameters 
+    -->
