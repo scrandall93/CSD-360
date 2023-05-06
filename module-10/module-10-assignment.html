@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+
+       Sam Crandall
+       May 5th, 2023
+       CSD 360; Module 10 Assignment 
+
+    -->
+
+<head>
+    <title>
+        Module 10 Assignment; CSD360
+    </title>
+<script>
+    function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+    }
+</script>
+</head>
+    <style>
+        body {
+            background-color: beige;
+        }
+        img {
+            width: 550px;
+            height: 560px;
+            padding: 50px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 1px;
+            text-align: center;
+            align-content: center;
+        }
+        h1 {
+            padding-top: 10px;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        div {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+<body>
+    <h1>My Two Favorite Places to Visit</h1>
+    <div class ="grid">
+        <div>
+            <a href="https://en.wikipedia.org/wiki/Italy"
+            onmouseover="italy.src='italy_image_1.jpg';"
+            onmouseout= "italy.src='italy_image_2.jpg';"
+            >
+            <img border = 0 name = "italy" src = "italy_image_2.jpg">
+            </a>
+        </div>
+        <div>
+            <a href="https://en.wikipedia.org/wiki/London"
+            onmouseover="london.src='london_image_1.jpg';"
+            onmouseout= "london.src='london_image_2.jpg';"
+            >
+            <img border = 0 name = "london" src = "london_image_2.jpg">
+            </a>
+        </div>
+        <div>
+            <a href="https://www.thecrazytourist.com/25-best-things-italy/"
+            onmouseover="this.style.color='red';"
+            onmouseout= "this.style.color='black';"
+            >Italy is a great place to travel, here are 25 things to do while you are there! 
+            </a>
+        </div>
+        <div>
+            <a href="https://www.thecrazytourist.com/25-best-things-to-do-in-london/"
+            onmouseover="this.style.color='red';"
+            onmouseout= "this.style.color='black';"
+            >London is a great place to travel, here are 25 things to do while you are there!
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+    <!-- references
+       
+    -->
