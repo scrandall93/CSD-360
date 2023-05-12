@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Gallery</title>
+  <style>
+    body {
+      background: url("travel-concept-with-plane-maps.jpg") no-repeat center/cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-size: 32px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    .blurred-image {
+      filter: blur(5px);
+    }
+  </style>
+  <script>
+    function focusImage(element) {
+      var images = document.querySelectorAll('.gallery img');
+      var body = document.querySelector('body');
+
+      // add Blur to all images
+      images.forEach(function (img) {
+        img.classList.add('blurred-image');
+      });
+
+      // remove Blur to the clicked image
+      element.classList.remove('blurred-image');
+
+      // remove blur when user clicks the background
+      body.onclick = function (event) {
+        if (event.target === body) {
+          images.forEach(function (img) {
+            img.classList.remove('blurred-image');
+          });
+        }
+      };
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Travels</h1>
+  <div class="gallery">
+    <img src="0014_3.jpg" alt="New York, New York" onclick="focusImage(this)">
+    <img src="0003_3.jpg" alt="Paris, France" onclick="focusImage(this)">
+    <img src="0008_3.jpg" alt="London, United Kingdom" onclick="focusImage(this)">
+    <img src="0007_3.jpg" alt="Amsterdam, Netherlands" onclick="focusImage(this)">
+    <img src="0010_3.jpg" alt="Amsterdam, Netherlands" onclick="focusImage(this)">
+    <img src="0012_3.jpg" alt="Manhattan, New York" onclick="focusImage(this)">
+    <img src="0013_3.jpg" alt="Manhattan, New York" onclick="focusImage(this)">
+    <img src="0001_3.jpg" alt="Paris, France" onclick="focusImage(this)">
+    <img src="0019_3.jpg" alt="Venice, Italy" onclick="focusImage(this)">
+  </div>
+</body>
+
+</html>
